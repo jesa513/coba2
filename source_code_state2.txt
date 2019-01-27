@@ -1,0 +1,324 @@
+App.js
+
+
+import React, { Component } from 'react';
+import './App.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div>
+       <HeaderBertasbih headerText="Bertasbih Commerce" />
+       <HeaderBertasbih headerText="Bunting Commerce" />
+       <ContentBertasbih />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+
+
+import React, { Component} from 'react';
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange'}}>
+
+           <h1>Ini Content</h1>
+           <p>Semalam di depan rumah, aku melihat ada kecoa bunting kelindes motor</p>
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;
+
+
+
+import React, {Component} from 'react';
+
+class HeaderBertasbih extends Component {
+
+    render() {
+
+    return (
+        <div>
+          <h1>{this.props.headerText}</h1>
+        </div>
+    );
+  }
+}
+export default HeaderBertasbih;
+
+
+import React, { Component } from 'react';
+import './App.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div>
+       <HeaderBertasbih headerText={"Bertasbih Commerce"} />
+       <HeaderBertasbih headerText={{ nyongnyong: 'Monyong'}} />
+       <ContentBertasbih />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+import React, {Component} from 'react';
+
+class HeaderBertasbih extends Component {
+
+    render() {
+
+    return (
+        <div>
+          <h1>{this.props.headerText.nyongnyong}</h1>
+        </div>
+    );
+  }
+}
+export default HeaderBertasbih;
+
+
+import React, { Component } from 'react';
+import './App.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/>
+       
+       <ContentBertasbih />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+import React, {Component} from 'react';
+
+class HeaderBertasbih extends Component {
+
+    render() {
+        if(this.props.headerText === undefined)
+        {
+            return (
+                <div>
+                  
+                </div>
+            )
+        }
+
+    return (
+        <div>
+          <h1>{this.props.headerText+ ' ' + this.props.mujigae}</h1>
+        </div>
+    );
+  }
+}
+export default HeaderBertasbih;
+
+import React, { Component} from 'react';
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange'}}>
+
+           <h1>Ini Content</h1>
+           {this.props.children}
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;
+
+
+import React, { Component } from 'react';
+import './App.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/>
+       
+       <ContentBertasbih>
+        <p>Kecoa</p>
+        <h5>Dia lagi bunting</h5>
+
+       </ContentBertasbih>
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+
+
+
+
+import React, { Component } from 'react';
+import './App.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/>
+       
+       <ContentBertasbih>
+        <p>Kecoa</p>
+        <h5>Dia lagi bunting</h5>
+
+       </ContentBertasbih>
+       <ContentBertasbih>
+        
+        <h5>Hello</h5>
+
+       </ContentBertasbih>
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+import React, { Component} from 'react';
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange'}}>
+
+           <h1>Ini Content</h1>
+           {this.props.children}
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;
+
+
+import React, { Component } from 'react';
+import './App.css';
+import './support/css/bootstrap.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  render() {
+    return (
+     <div className={"container"}>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/>
+       
+       <ContentBertasbih>
+        <p>Kecoa</p>
+        <h5>Dia lagi bunting</h5>
+
+       </ContentBertasbih>
+       <ContentBertasbih>
+        
+        <h5>Hello</h5>
+
+       </ContentBertasbih>
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+</ContentBertasbih>
+       <input type="button" value="OK" className="btn btn-primary" />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+ </ContentBertasbih>
+       <input type="button" style={{ backgroundColor: 'Red'}}   value="OK" className="btn btn-primary" />
+       <FooterBertasbih />
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+import React, {Component} from 'react';
+
+class bertasbihnyingnyong extends Component {
+    state = { nyingnyong: 'Teletubies', monyong: 'Gua Mon'}
+
+    componentWillMount()
+    {
+        console.log('Ini Will Mount');
+
+    }
+
+    // componentDidMount()
+    // {
+    //     console.log('Ini Did Mount')
+    //     this.setState({ nyingnyong: 'Martabak', kunyong: "saya kunyong"})
+
+    // }
+
+    //  componentWillUpdate()
+    //  {  console.log('Ini Will Update') }
+
+    render() {
+        console.log('Ini Render');
+            
+
+    return (
+        <div>
+          <h2>Ini Function Component Header Bertasbih</h2>
+          <h3>{this.state.nyingnyong} </h3>
+          <h3>{this.state.monyong} </h3>
+          <p> </p>
+        </div>
+
+
+    )
+   } 
+}
+export default bertasbihnyingnyong;
+
+
+
+
+
+
+
+
+
+componentDidMount()
+    {
+        console.log('Ini Did Mount')
+        this.setState({ nyingnyong: 'Martabak', kunyong: "saya kunyong"})
+
+    }
+
+
+
+import React, {Component} from 'react';
+
+class bertasbihnyingnyong extends Component {
+    state = { nyingnyong: 'Teletubies', monyong: 'Gua Mon'}
+
+    componentWillMount()
+    {
+        console.log('Ini Will Mount');
+        
+    }
+
+    componentDidMount()
+    {
+        console.log('Ini Did Mount')
+        this.state.nyingnyong='Martabak';
+        
+    }
+
+     componentWillUpdate()
+    {  console.log('Ini Will Update') 
+       this.setState({});
+    }
+
+    componentDidUpdate(){
+        console.log('Ini Did Update')
+    }
+
+    render() {
+        console.log('Ini Render');
+        console.log(this.state);
+        
+            
+
+    return (
+        <div>
+          <h2>Ini Function Component Header Bertasbih</h2>
+          <h3>{this.state.nyingnyong} </h3>
+          <h3>{this.state.monyong} </h3>
+          <p> </p>
+        </div>
+
+    )
+    }
+}
+export default bertasbihnyingnyong;
+
+
+
+
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange'}}>
+
+           <h1>Ini Content</h1>
+           <p>Semalam di depan rumah, aku melihat ada kecoa bunting kelinder motor</p>
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+import React, { Component} from 'react';
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange', backgroundColor: 'Red'}}>
+
+           <h1>Ini Content</h1>
+           {this.props.children}
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;

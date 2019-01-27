@@ -1,0 +1,450 @@
+
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
+
+
+
+import React, { Component } from 'react';
+import './App.css';
+import './support/css/bootstrap.css';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  state = {content:'Ini Content'}
+
+  onBtnOKClick = () => {
+    this.setState({ content: 'Ini Comberan'})
+  }
+  render() {
+    var { content} = this.state;
+    return (
+     <div className={"container"}>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/> 
+       
+       <ContentBertasbih contentHeader={content}>
+        <p>Kecoa</p>
+        <h5>Dia lagi bunting</h5>
+
+       </ContentBertasbih>
+       <ContentBertasbih>
+        
+        <h5>Hello</h5>
+
+       </ContentBertasbih>
+       <input type="button" style={{ backgroundColor: 'Red'}} 
+         value="OK"
+         className="btn btn-primary"
+         onClick={this.onBtnOKClick}
+         />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+import React, { Component} from 'react';
+
+
+class ContentBertasbih extends Component
+{
+  render()
+  {
+    return(
+       <center style={{ color: 'orange'}}>
+
+           <h1>{this.props.contentHeader}</h1>
+           {this.props.children}
+       </center>
+
+
+    )
+
+  }
+
+
+}
+export default ContentBertasbih;
+
+https://reactstrap.github.io/
+
+
+
+index.js
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
+
+
+import React, { Component } from 'react';
+import { Button } from 'reactstrap';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+
+class App extends Component {
+  state = {content:'Ini Content'}
+
+  onBtnOKClick = () => {
+    this.setState({ content: 'Ini Comberan'})
+  }
+  render() {
+    var { content} = this.state;
+    return (
+     <div className={"container"}>
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/> 
+       
+       <ContentBertasbih contentHeader={content}>
+       <Button color="danger" onClick={this.onBtnOKClick}>danger</Button>
+        <p>Kecoa</p>
+        <h5>Dia lagi bunting</h5>
+
+       </ContentBertasbih>
+       <ContentBertasbih>
+        
+        <h5>Hello</h5>
+
+       </ContentBertasbih>
+       <input type="button" style={{ backgroundColor: 'Red'}} 
+         value="OK"
+         className="btn btn-primary"
+         onClick={this.onBtnOKClick}
+         />
+       <FooterBertasbih />
+     </div>
+    );
+  }
+}
+
+export default App;
+
+HeaderBertasbih
+
+import React, {Component} from 'react';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
+
+class HeaderBertasbih extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          isOpen: false
+        };
+      }
+      toggle() {
+        this.setState({
+          isOpen: !this.state.isOpen
+        });
+    }
+    render() {
+        
+        return (
+        <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">Components</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Option 1
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
+export default HeaderBertasbih;
+
+
+App.js
+
+render() {
+    var { content} = this.state;
+    return (
+     <div className={"container-fluid"}> // ada fluidnya supaya sampai ujung
+       <HeaderBertasbih headerText={"Ini Header"} mujigae={500}/> 
+
+
+
+
+header
+
+return (
+        <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">{this.props.navBrand}</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+
+
+App
+ render() {
+    var { content} = this.state;
+    return (
+     <div className={"container-fluid"}>
+       <HeaderBertasbih navBrand={"Bertasbih"}/> 
+       
+       <ContentBertasbih contentHeader={content}>
+       <Button color="danger" onClick={this.onBtnOKClick}>danger</Button>
+        <p>Kecoa</p>
+
+
+inputbertasbih
+
+import React, { Component } from 'react';
+
+class InputBertasbih extends Component
+{
+  render() {
+      return (
+        <input type={this.props.type} ref={this.props.innerRef} />
+
+      )
+
+  }
+
+
+}
+export default InputBertasbih;
+
+App
+
+import React, { Component } from 'react';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+import InputBertasbih from './components/InputBertasbih';
+
+class App extends Component {
+  state = {content:'Ini Content', username: ''}
+
+  onBtnOKClick = () => {
+    this.setState({ content: 'Ini Comberan'})
+  }
+
+onBtnLoginClick =() => {
+ var username = this.refs.username.refs.tbUsername.value;
+ console.log(username)
+
+}
+
+  render() {
+    var { content} = this.state;
+    return (
+     <div className={"container-fluid"}>
+       <HeaderBertasbih navBrand={"Bertasbih"}/> 
+       
+       <ContentBertasbih contentHeader={content}/>
+       <Button color="danger" onClick={this.onBtnOKClick}>danger</Button>
+       <Form style={{ margin: "0 auto"}}className='col-3'>
+        <FormGroup>
+          <Label for="exampleUsername">Username</Label>
+          <InputBertasbih type="text" name="username" ref="username" innerRef="tbUsername" id="exampleUsername" placeholder="Username" />
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Password</Label>
+          <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+        </FormGroup> 
+        <Button color="success" onClick={this.onBtnLoginClick}>Login</Button>
+        </Form>
+        
+     </div>
+    );
+  }
+}
+
+
+export default App;
+
+
+
+
+masih error
+
+App
+
+import React, { Component } from 'react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import HeaderBertasbih from './components/HeaderBertasbih';
+import ContentBertasbih from './components/ContentBertasbih';
+import FooterBertasbih from './components/FooterBertasbih';
+import InputBertasbih from './components/InputBertasbih';
+
+class App extends Component {
+  state = {content:'Ini Content', username: ''}
+
+  onBtnOKClick = () => {
+    this.setState({ content: 'Ini Comberan'})
+  }
+
+onBtnLoginClick =() => {
+ var username = this.refs.username.refs.tbUsername.value;
+ this.setState({ username})
+
+}
+
+  render() {
+    var { username } = this.state;
+    return (
+     <div className={"container-fluid"}>
+       <HeaderBertasbih navBrand={"Bertasbih"} username={username}/> 
+       
+       <ContentBertasbih contentHeader={content}/>
+       <Button color="danger" onClick={this.onBtnOKClick}>danger</Button>
+       <Form style={{ margin: "0 auto"}}className='col-3'>
+        <FormGroup>
+          <Label for="exampleUsername">Username</Label>
+          <Input type="text" name="username" ref="username" innerRef="tbUsername" id="exampleUsername" placeholder="Username" />
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Password</Label>
+          <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+        </FormGroup> 
+        <Button color="success" onClick={this.onBtnLoginClick}>Login</Button>
+        </Form>
+        
+     </div>
+    );
+  }
+}
+
+
+export default App;
+
+header
+
+import React, {Component} from 'react';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
+
+class HeaderBertasbih extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          isOpen: false
+        };
+      }
+      toggle() {
+        this.setState({
+          isOpen: !this.state.isOpen
+        });
+    }
+    render() {
+        if(this.props.username === "") {
+        
+        return (
+        <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">{this.props.navBrand}</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink>Register</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>Login</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Option 1
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
+export default HeaderBertasbih;
